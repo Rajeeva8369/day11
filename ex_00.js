@@ -1,4 +1,8 @@
 async function asyncFunc() {
     return "Hello World!";
 }
-asyncFunc().then(result => console.log(result));
+async function displayResult() {
+    const result = await asyncFunc();
+    console.log(result);
+}
+displayResult();
